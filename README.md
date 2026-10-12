@@ -1,5 +1,5 @@
 # Digital Cuckoo Clock
-A smart digital clock with alarm, environmental monitoring and multimedia features
+A smart digital clock with alarm, environmental monitoring and multimedia features. This project uses Rust as the programming language, with the Embassy async framework.
 
 ## Description
 
@@ -15,8 +15,12 @@ The system is structured into several main components: the central control unit,
 
 The sensing subsystem includes the air quality sensor which provide real-time environmental data to the STM32. This data is used both for display purposes.
 
-The multimedia subsystem includes the display, audio sources, and storage. The TFT touchscreen display communicates with the STM32 via SPI, while the SD card shares the same SPI bus. The FM radio module communicates via I2C. Audio playback is handled by external modules (amplifier), which receive analog signals and output sound to the speakers.
+The multimedia subsystem includes the display, audio sources, and storage. The TFT touchscreen display communicates with the STM32 via SPI, while the SD card shares the same SPI bus. Audio playback is handled by external modules (amplifier), which receive analog signals and output sound to the speakers.
 
 The actuation system includes the servo motor used for the cuckoo mechanism via PWM signals. The STM32 generates control signals using timers.
 
 All components are powered by a 5V USB power supply, with voltage stabilization ensured by capacitors. The STM32 interfaces with peripherals using SPI, ADC, and PWM depending on the device.
+
+##Running the program
+There is a bin folder containing codes for testing some of the components and the main.rs with the final implementation.
+To run the full program, use cargo run. For each individual testing file, the command is cargo --bin run filename.
