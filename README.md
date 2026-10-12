@@ -21,6 +21,6 @@ The actuation system includes the servo motor used for the cuckoo mechanism via 
 
 All components are powered by a 5V USB power supply, with voltage stabilization ensured by capacitors. The STM32 interfaces with peripherals using SPI, ADC, and PWM depending on the device.
 
-##Running the program
+## Running the program
 There is a bin folder containing codes for testing some of the components and the main.rs with the final implementation.
 To run the full program, use cargo run. For each individual testing file, the command is cargo --bin run filename.
